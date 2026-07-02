@@ -51,7 +51,7 @@ async function initBot() {
         if (!dbData) {
             console.log("⚠️ MongoDB is empty. Fetching old data from URL...");
             try {
-                const response = await axios.get("https://vipcentre.xyz/pombotkanhaiya/data.json");
+                const response = await axios.get("https://vipcentre.xyz/kanhaiya/data.json");
                 if (response.data) data = { ...data, ...response.data };
                 console.log("✅ Remote data fetched successfully.");
             } catch (err) {
