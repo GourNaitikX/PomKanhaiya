@@ -3,8 +3,8 @@ const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 const { MongoClient } = require('mongodb');
 
-const botToken = "8459603547:AAG6v_u2Sr5EB2T9AmQ7bWMTc0-MrtvfH2E";
-const adminId = "6198353113";
+const botToken = "7612850579:AAFYeD2FagDn7xMhWExRTxSX8isNTYIcuFA";
+const adminId = "7816214323";
 const mongoUrl = process.env.MONGO_URL; 
 
 let bot;
@@ -51,7 +51,7 @@ async function initBot() {
         if (!dbData) {
             console.log("⚠️ MongoDB is empty. Fetching old data from URL...");
             try {
-                const response = await axios.get("https://vipcentre.site/titanbotpom/data.json");
+                const response = await axios.get("https://vipcentre.site/pombotkanhaiya/data.json");
                 if (response.data) data = { ...data, ...response.data };
                 console.log("✅ Remote data fetched successfully.");
             } catch (err) {
